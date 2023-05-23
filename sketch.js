@@ -30,8 +30,9 @@ path.velocityY = 4;
 //creating boy running
 boy = createSprite(70,580,20,20);
 boy.addAnimation("SahilRunning",boyImg);
+boy.addAnimation("SahilEnd", endImg)
 boy.scale=0.08;
-  
+
   
 cashG=new Group();
 diamondsG=new Group();
@@ -79,8 +80,8 @@ function draw() {
       if(swordGroup.isTouching(boy)) {
         gameState=END;
         
-         boy.addAnimation(endImg);
-        // boy.addAnimation("SahilRunning",endImg);
+         //boy.addAnimation(endImg);
+         boy.changeAnimation("SahilEnd",endImg);
         // boy.addAnimation("SahilRunning");
         // boy.addAnimation(SahilRunning,endImg);
 
@@ -88,20 +89,20 @@ function draw() {
         boy.y=300;
         boy.scale=0.6;
         
-        // cashG.destroyEach;
-        // diamondsG.destroyEach;
-        // jewelryG.destroyEach;
-        // swordGroup.destroyEach;
+         //cashG.destroyEach;
+         //diamondsG.destroyEach;
+         //jewelryG.destroyEach;
+         //swordGroup.destroyEach;
 
-         cashG.destroy();
-         diamondsG.destroy();
-         jewelryG.destroy();
-         swordGroup.destroy();
+         //cashG.destroy();
+         //diamondsG.destroy();
+         //jewelryG.destroy();
+         //swordGroup.destroy();
         
-        // cashG.destroyEach();
-        // diamondsG.destroyEach();
-        // jewelryG.destroyEach();
-        // swordGroup.destroyEach();
+         cashG.destroyEach();
+         diamondsG.destroyEach();
+         jewelryG.destroyEach();
+         swordGroup.destroyEach();
         
         // cashGdestroyEach();
         // diamondsGdestroyEach();
